@@ -1,0 +1,66 @@
+/* Colors */
+.track-container {
+  background-color: white;
+  color: #6d6d6d;
+}
+
+/* Spacing */
+.track-container, .track, .track-label, .track-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.track-label, .track-stage, .track-wrapper > hr {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Animations */
+.track-wrapper > hr {
+  z-index: 2;
+  border: 0px;
+  border-top: 1px solid #6d6d6d4b;
+}
+
+.track-wrapper:hover > hr {
+  animation: hrWipe 0.4s linear;
+  animation-fill-mode: backwards;
+}
+
+@keyframes hrWipe {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.track-container {
+  flex-direction: column;
+  padding-top: 2.5vh;
+}
+
+.track-wrapper {
+  margin: 0vh 0vh 2.5vh;
+  padding: 1px;
+}
+
+.track {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75vw;
+  margin: -1px;
+}
+
+.track-label {
+  height: 10vh;
+  width: 10vh;
+}
+
+.track-stage {
+  height: 10vh;
+  width: 18vw;
+}
+
+/*# sourceMappingURL=Track.css.map */

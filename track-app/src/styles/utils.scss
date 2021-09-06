@@ -1,0 +1,64 @@
+/* Colors */
+$trackGrey: #6d6d6d;
+$trackLightGrey: #6d6d6d4b;
+
+%trackTheme {
+  background-color:white;
+  color: $trackGrey;
+}
+
+%trackOutline {
+  @extend %trackTheme;
+  border: 1px solid $trackGrey;
+}
+
+/* Spacing */
+%flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%clearSpacing {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Animations */
+%transitionTiming {
+  transition: 0.4s;
+}
+
+%hrule {
+  @extend %clearSpacing;
+
+  z-index: 2;
+  border: 0px;
+  border-top: 1px solid $trackLightGrey;
+}
+
+@mixin underline-fade($offset: 0px) {
+  @extend %hrule;
+  @extend %transitionTiming;
+  width: 96%;
+  margin: auto;
+  position: relative;
+  top: $offset;
+
+  opacity: 0;
+}
+
+%underlineFadeHover {
+  @extend %transitionTiming;
+  opacity: 0.8;
+}
+
+%hruleWipe {
+  animation: hrWipe 0.4s linear;
+  animation-fill-mode: backwards;
+}
+
+@keyframes hrWipe {
+  from {width: 0%}
+  to {width: 100%}
+}

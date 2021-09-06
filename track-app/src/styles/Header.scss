@@ -1,0 +1,53 @@
+@use 'utils';
+
+$titleHeight: calc(20px + 3.6vmin);
+$marginTop: calc(20px + 8vh);
+$subheaderWidth: calc(30px + 18vmin);
+
+.header {
+  @extend %trackTheme;
+  @extend %flexCenter;
+
+  flex-direction: column;
+  height: 25vh;
+
+  margin-top: $marginTop;
+}
+
+.header > h1 {
+  @extend %trackTheme;
+  @extend %clearSpacing;
+  font-size: $titleHeight;
+}
+
+.header > h1 > hr {
+  @include utils.underline-fade(-0.8vh);
+}
+
+.header > h1:hover > hr {
+  @extend %underlineFadeHover;
+}
+
+.subheader {
+  @extend %flexCenter;
+
+  width: $subheaderWidth;
+  justify-content: space-between;
+}
+
+.subheader > p {
+  @extend %clearSpacing;
+  display: inline-block;
+  margin-top: 5px;
+  white-space: nowrap;
+
+  font-size: calc(6px + 0.8vmin);
+}
+
+.subheader > p > hr{
+  @include utils.underline-fade();
+}
+
+.subheader > p:hover > hr {
+  @extend %underlineFadeHover;
+}

@@ -1,0 +1,55 @@
+@use 'utils';
+
+$vspace: 2.5vh;
+
+.track-container {
+  @extend %trackTheme;
+  @extend %flexCenter;
+
+  flex-direction: column;
+  padding-top: $vspace;
+}
+
+.track-wrapper {
+  margin: 0vh 0vh $vspace;
+  padding: 1px;
+}
+
+.track-wrapper > hr {
+  @extend %hrule;
+}
+
+.track-wrapper:hover > hr {
+  @extend %hruleWipe;
+}
+
+.track {
+  @extend %flexCenter;
+
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 75vw;
+  margin: -1px;
+}
+
+.track > * {
+  // border-top: 1px solid utils.$trackLightGrey;
+  // border-bottom: 1px solid utils.$trackLightGrey;
+}
+
+.track-label {
+  @extend %flexCenter;
+  @extend %clearSpacing;
+
+  height: 10vh;
+  width: 10vh;
+}
+
+.track-stage {
+  @extend %flexCenter;
+  @extend %clearSpacing;
+
+  height: 10vh;
+  width: 18vw;
+}
