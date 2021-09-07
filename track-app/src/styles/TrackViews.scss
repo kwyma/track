@@ -1,0 +1,31 @@
+@use 'Track';
+
+.track-view {
+  padding-top: calc(20px + 8vh);
+}
+
+/* Multitrack container */
+.multitrack-container {
+  @extend %trackTheme;
+  @extend %flexCenter;
+
+  width: 70vw;
+  height: 50vh;
+
+  flex-direction: column;
+  padding-top: Track.$vspace;
+}
+
+/*** Singletrack ***/
+.singletrack-container {
+  @extend %trackTheme;
+  @extend %flexCenter;
+
+  width: 70vw;
+  height: 30vh;
+}
+.solo-track {
+  @include Track.track-wrapper(60%);
+
+  margin-top: 5vh;
+}

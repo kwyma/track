@@ -1,0 +1,79 @@
+@use 'utils';
+
+$hscale: 15vh;
+$vscale: calc(40px + 0.4 * #{$hscale});
+$numOptions: 6;
+
+/* Menu */
+.menu-view {
+  @extend %clearSpacing;
+  position: fixed;
+  top: 0%;
+
+  z-index: 3;
+  background-color: white;
+
+  height: 100vh;
+}
+.menu-show {
+  @extend %transitionTiming;
+  left: 0%;
+  // margin-left: -$numOptions * $hscale;
+  width: 100vw;
+  opacity: 1;
+}
+.menu-hide {
+  @extend %transitionTiming;
+  left: 50%;
+  margin-left: 0;
+  width: 0vw;
+  opacity: 0;
+}
+
+/* Menu container */
+.menu-container {
+  @extend %trackTheme;
+  @extend %flexCenter;
+
+  width: 60%;
+  margin: auto;
+  margin-top: calc(50vh - 0.5 * #{$vscale});
+
+  justify-content: space-between;
+}
+
+/* Option */
+.option {
+  @extend %flexCenter;
+  @extend %transitionTiming;
+
+  height: $vscale;
+
+  flex-direction: column;
+  justify-content: space-between;
+}
+.option > span > p {
+  @extend %clearSpacing;
+  font-size: calc(8px + 0.8vmin);
+  white-space: nowrap;
+}
+.option > span > hr {
+  @include utils.underline-fade(3px);
+}
+.option:hover > span > hr {
+  @extend %underlineFadeHover;
+}
+.option > img {
+  @extend %transitionTiming;
+  opacity: 0.15;
+  width: calc(30px + 1.5vw);
+}
+.option:hover > img {
+  opacity: 0.4;
+}
+.option-show {
+  width: $hscale;
+}
+.option-hide {
+  width: 0%;
+}

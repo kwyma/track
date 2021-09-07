@@ -1,0 +1,82 @@
+/*** Colors ***/
+/*** Spacing ***/
+.verttrack, .verttrack-label, .verttrack-stage, .verttrack-reverse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.verttrack-label, .verttrack-stage {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*** Animations ***/
+/* Hrule hover */
+/* Hrule wipe */
+@keyframes hrWipe {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* Float */
+@keyframes floatUp {
+  from {
+    top: 10px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+/* VertTrack */
+.verttrack {
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.verttrack-label {
+  height: 20%;
+}
+
+.verttrack-stage {
+  height: 25%;
+}
+
+/*** VertTrack wrapper ***/
+.verttrack-wrapper {
+  background-color: #6d6d6d05;
+  display: inline-block;
+  height: 100%;
+  width: 30%;
+}
+
+.verttrack-wrapper:hover,
+.verttrack-wrapper-perspective:hover {
+  background-color: #6d6d6d4b;
+}
+
+/*** VertTrack perspective ***/
+.verttrack-wrapper-perspective {
+  background-color: #6d6d6d05;
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  height: 100%;
+  width: 30%;
+  transform-style: preserve-3d;
+  transform: rotateX(45deg);
+}
+
+.verttrack-reverse {
+  height: 100%;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=VertTrack.css.map */

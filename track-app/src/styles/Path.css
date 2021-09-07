@@ -1,6 +1,11 @@
 /*** Colors ***/
+.pathtrack-container {
+  background-color: #ffffff;
+  color: #6d6d6d;
+}
+
 /*** Spacing ***/
-.App {
+.pathtrack-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,8 +33,15 @@
     opacity: 1;
   }
 }
-.App {
-  text-align: center;
+.day-view {
+  padding-top: 6vh;
 }
 
-/*# sourceMappingURL=App.css.map */
+.pathtrack-container {
+  perspective: 100px;
+  justify-content: space-around;
+  width: 80vw;
+  height: 40vh;
+}
+
+/*# sourceMappingURL=Path.css.map */

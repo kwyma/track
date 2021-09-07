@@ -1,0 +1,122 @@
+/*** Colors ***/
+.menu-container {
+  background-color: #ffffff;
+  color: #6d6d6d;
+}
+
+/*** Spacing ***/
+.menu-container, .option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-view, .option > span > p, .option > span > hr {
+  margin: 0px;
+  padding: 0px;
+}
+
+/*** Animations ***/
+.menu-show, .menu-hide, .option, .option > span > hr, .option > img, .option:hover > span > hr {
+  transition: 0.4s;
+}
+
+.option > span > hr {
+  z-index: 2;
+  border: 0px;
+  border-top: 1px solid #6d6d6d4b;
+}
+
+/* Hrule hover */
+.option:hover > span > hr {
+  opacity: 0.8;
+}
+
+/* Hrule wipe */
+@keyframes hrWipe {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* Float */
+@keyframes floatUp {
+  from {
+    top: 10px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
+}
+/* Menu */
+.menu-view {
+  position: fixed;
+  top: 0%;
+  z-index: 3;
+  background-color: white;
+  height: 100vh;
+}
+
+.menu-show {
+  left: 0%;
+  width: 100vw;
+  opacity: 1;
+}
+
+.menu-hide {
+  left: 50%;
+  margin-left: 0;
+  width: 0vw;
+  opacity: 0;
+}
+
+/* Menu container */
+.menu-container {
+  width: 60%;
+  margin: auto;
+  margin-top: calc(50vh - 0.5 * calc(40px + 0.4 * 15vh));
+  justify-content: space-between;
+}
+
+/* Option */
+.option {
+  height: calc(40px + 0.4 * 15vh);
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.option > span > p {
+  font-size: calc(8px + 0.8vmin);
+  white-space: nowrap;
+}
+
+.option > span > hr {
+  top: 3px;
+  width: 96%;
+  margin: auto;
+  position: relative;
+  opacity: 0;
+}
+
+.option > img {
+  opacity: 0.15;
+  width: calc(30px + 1.5vw);
+}
+
+.option:hover > img {
+  opacity: 0.4;
+}
+
+.option-show {
+  width: 15vh;
+}
+
+.option-hide {
+  width: 0%;
+}
+
+/*# sourceMappingURL=Menu.css.map */

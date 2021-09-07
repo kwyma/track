@@ -1,12 +1,25 @@
-/* Colors */
-/* Spacing */
-/* Animations */
+/*** Colors ***/
+/*** Spacing ***/
+/*** Animations ***/
+/* Hrule hover */
+/* Hrule wipe */
 @keyframes hrWipe {
   from {
     width: 0%;
   }
   to {
     width: 100%;
+  }
+}
+/* Float */
+@keyframes floatUp {
+  from {
+    top: 10px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
   }
 }
 

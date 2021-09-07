@@ -1,6 +1,11 @@
 /*** Colors ***/
+.daytrack-container {
+  background-color: #ffffff;
+  color: #6d6d6d;
+}
+
 /*** Spacing ***/
-.App {
+.daytrack-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,8 +33,14 @@
     opacity: 1;
   }
 }
-.App {
-  text-align: center;
+.day-view {
+  padding-top: 4vh;
 }
 
-/*# sourceMappingURL=App.css.map */
+.daytrack-container {
+  justify-content: space-around;
+  width: 80vw;
+  height: 60vh;
+}
+
+/*# sourceMappingURL=Day.css.map */

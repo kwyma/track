@@ -2,54 +2,46 @@
 
 $vspace: 2.5vh;
 
-.track-container {
-  @extend %trackTheme;
-  @extend %flexCenter;
+/* Track wrapper */
+@mixin track-wrapper($height: 25%) {
+  height: $height;
 
-  flex-direction: column;
-  padding-top: $vspace;
-}
-
-.track-wrapper {
+  width: 100%;
   margin: 0vh 0vh $vspace;
-  padding: 1px;
 }
-
+/* Track wrapper */
+.track-wrapper {
+  @include track-wrapper();
+}
 .track-wrapper > hr {
   @extend %hrule;
+  width: 0%;
 }
-
+.track-wrapper:hover {
+  background-color: utils.$trackLightGrey2;
+}
 .track-wrapper:hover > hr {
   @extend %hruleWipe;
 }
 
+/* Track */
 .track {
   @extend %flexCenter;
 
+  height: 100%;
+
   flex-direction: row;
   justify-content: space-between;
-
-  width: 75vw;
-  margin: -1px;
 }
-
-.track > * {
-  // border-top: 1px solid utils.$trackLightGrey;
-  // border-bottom: 1px solid utils.$trackLightGrey;
-}
-
 .track-label {
   @extend %flexCenter;
   @extend %clearSpacing;
 
-  height: 10vh;
-  width: 10vh;
+  width: 15%;
 }
-
 .track-stage {
   @extend %flexCenter;
   @extend %clearSpacing;
 
-  height: 10vh;
-  width: 18vw;
+  width: 20%;
 }

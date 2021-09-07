@@ -1,0 +1,69 @@
+@use 'utils';
+
+$vspace: 2.5vh;
+
+/* VertTrack */
+.verttrack {
+  @extend %flexCenter;
+
+  height: 100%;
+
+  flex-direction: column;
+  justify-content: space-between;
+}
+.verttrack-label {
+  @extend %flexCenter;
+  @extend %clearSpacing;
+
+  height: 20%;
+}
+.verttrack-stage {
+  @extend %flexCenter;
+  @extend %clearSpacing;
+
+  height: 25%;
+}
+
+/*** VertTrack wrapper ***/
+.verttrack-wrapper {
+  background-color: utils.$trackLightGrey2;
+
+  display: inline-block;
+  height: 100%;
+  width: 30%;
+}
+
+// .track-wrapper > hr {
+//   @extend %hrule;
+//   width: 0%;
+// }
+.verttrack-wrapper:hover,
+.verttrack-wrapper-perspective:hover {
+  background-color: utils.$trackLightGrey;
+}
+// .track-wrapper:hover > hr {
+//   @extend %hruleWipe;
+// }
+
+/*** VertTrack perspective ***/
+.verttrack-wrapper-perspective {
+  background-color: utils.$trackLightGrey2;
+
+  position: relative;
+  top: 15px;
+
+  display: inline-block;
+  height: 100%;
+  width: 30%;
+
+  transform-style: preserve-3d;
+  transform: rotateX(45deg);
+}
+.verttrack-reverse {
+  @extend %flexCenter;
+
+  height: 100%;
+
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}

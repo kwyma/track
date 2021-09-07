@@ -1,9 +1,10 @@
-/* Colors */
+/*** Colors ***/
 $trackGrey: #6d6d6d;
 $trackLightGrey: #6d6d6d4b;
+$trackLightGrey2: #6d6d6d05;
 
 %trackTheme {
-  background-color:white;
+  background-color:#ffffff;
   color: $trackGrey;
 }
 
@@ -12,7 +13,7 @@ $trackLightGrey: #6d6d6d4b;
   border: 1px solid $trackGrey;
 }
 
-/* Spacing */
+/*** Spacing ***/
 %flexCenter {
   display: flex;
   justify-content: center;
@@ -24,7 +25,7 @@ $trackLightGrey: #6d6d6d4b;
   padding: 0px;
 }
 
-/* Animations */
+/*** Animations ***/
 %transitionTiming {
   transition: 0.4s;
 }
@@ -37,28 +38,45 @@ $trackLightGrey: #6d6d6d4b;
   border-top: 1px solid $trackLightGrey;
 }
 
+/* Hrule hover */
 @mixin underline-fade($offset: 0px) {
+  top: $offset;
+
   @extend %hrule;
   @extend %transitionTiming;
   width: 96%;
   margin: auto;
   position: relative;
-  top: $offset;
-
   opacity: 0;
 }
-
 %underlineFadeHover {
   @extend %transitionTiming;
   opacity: 0.8;
 }
 
+/* Hrule wipe */
 %hruleWipe {
-  animation: hrWipe 0.4s linear;
-  animation-fill-mode: backwards;
+  animation: hrWipe 0.3s linear;
+  animation-fill-mode: forwards;
 }
-
 @keyframes hrWipe {
   from {width: 0%}
   to {width: 100%}
+}
+
+%floatUp {
+  animation: floatUp 0.8s ease-out;
+  animation-fill-mode: forwards;
+}
+
+/* Float */
+@keyframes floatUp {
+  from {
+    top: 10px;
+    opacity: 0;
+  }
+  to {
+    top: 0px;
+    opacity: 1;
+  }
 }

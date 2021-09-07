@@ -1,0 +1,7 @@
+@use 'utils';
+
+.App {
+  @extend %flexCenter;
+
+  text-align: center;
+}

@@ -1,0 +1,17 @@
+@use 'utils';
+
+.day-view {
+  padding-top: 6vh;
+}
+
+.pathtrack-container {
+  @extend %trackTheme;
+  @extend %flexCenter;
+
+	perspective: 100px;
+
+	justify-content: space-around;
+
+  width: 80vw;
+  height: 40vh;
+}

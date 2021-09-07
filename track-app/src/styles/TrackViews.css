@@ -1,6 +1,11 @@
 /*** Colors ***/
+.multitrack-container, .singletrack-container {
+  background-color: #ffffff;
+  color: #6d6d6d;
+}
+
 /*** Spacing ***/
-.track, .track-label, .track-stage {
+.track, .track-label, .track-stage, .multitrack-container, .singletrack-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,4 +80,29 @@
   width: 20%;
 }
 
-/*# sourceMappingURL=Track.css.map */
+.track-view {
+  padding-top: calc(20px + 8vh);
+}
+
+/* Multitrack container */
+.multitrack-container {
+  width: 70vw;
+  height: 50vh;
+  flex-direction: column;
+  padding-top: 2.5vh;
+}
+
+/*** Singletrack ***/
+.singletrack-container {
+  width: 70vw;
+  height: 30vh;
+}
+
+.solo-track {
+  height: 60%;
+  width: 100%;
+  margin: 0vh 0vh 2.5vh;
+  margin-top: 5vh;
+}
+
+/*# sourceMappingURL=TrackViews.css.map */
